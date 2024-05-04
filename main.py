@@ -11,4 +11,14 @@ def show_users(user_list: list[dict]) -> None:
         print(f"Twoj znajomy {user['name']} opublikował: {user['posts']} postów")
 
 
-show_users(users)
+if __name__ == "__main__":
+    print("Witaj użytkowniku")
+    while True:
+        print("menu:")
+        print("1. Wyświetl co u znajomych")
+        menu_option:str=input("Dokonaj wyboru:")
+        if menu_option == "0":
+            print("Program kończy prace")
+            break
+        if menu_option == "1":
+            show_users(users)
