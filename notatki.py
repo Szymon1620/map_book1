@@ -1,14 +1,13 @@
-from models.data import users
-from utils.crud import show_users
+class User:
+
+    def __init__(self, name, surname, posts, location):
+        self.name = name
+        self.surname = surname
+        self.posts = posts
+        self.location = location
 
 
-def update_user(users)-> None:
-    kogo_szukasz=input("Kogo szukasz?:")
-    for user in users:
-        if user['name']==kogo_szukasz:
-            user['name']=input("Podaj nowe imię:")
-            user['surname']=input("Podaj nowe nazwisko:")
-            user['posts']=input("Podaj liczbę postów:")
-print(users)
-update_user(users)
-print(users)
+user_1 = User("Jan", "Borowiecki", "3", "Warszawa")
+user_1 = User("Tomek", "Borowiecki", "34", "Warszawa")
+print(user_1.name)
+
